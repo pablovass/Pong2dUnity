@@ -6,13 +6,14 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] Transform paddle;
     [SerializeField]  Rigidbody2D rbBall;
-    private bool gameStarted = false;
-    
+    [SerializeField] private AudioSource ballAudio;
+    public bool gameStarted = false; // public por que nesesitamos acceder desde otra clase
+     float posDif = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+       posDif = paddle.position.x - transform.position.x;
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class Ball : MonoBehaviour
         if (!gameStarted)
         {
          
-            float posDif = paddle.position.x - transform.position.x;
+           
             transform.position = new Vector3(paddle.position.x - posDif, paddle.position.y, paddle.position.z);
             
             if (Input.GetMouseButtonDown(0))
@@ -31,5 +32,10 @@ public class Ball : MonoBehaviour
             }
    
         }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    { 
+        // crear un condicional para que solo suene cuando golpee contra el auto
+        ballAudio.Play();
     }
 }
