@@ -2,9 +2,9 @@
 It is a video game made in unity engine in LTS version:
 
 # How to play the game?
-You will be able to find an .exe file to run the game:
+I leave you a url for you to play it
 
-If you can't find it, it's because it's not finished yet
+https://pablovass.github.io/pong_car-game/
   ...
 
 ## Built with 🛠️
