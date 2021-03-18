@@ -4,7 +4,7 @@ It is a video game made in unity engine in LTS version:
 # How to play the game?
 I leave you a url for you to play it
 
-https://pablovass.github.io/pong_car-game/
+https://github.com/pablodavallejos/calaberas-game
   ...
 
 ## Built with 🛠️
